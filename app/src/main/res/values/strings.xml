@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">GraduationProject</string>
     <string name="user_login">用户登录</string>
+    <string name="doctor_login">医生登录</string>
+    <string name="admim_login">管理员登录</string>
+    <string name="gobal_hospital">国际医院</string>
+    <string name="password_forget">忘记密码</string>
+    <string name="sign_in">注册账户</string>
+
+
+
+
+
+
 </resources>

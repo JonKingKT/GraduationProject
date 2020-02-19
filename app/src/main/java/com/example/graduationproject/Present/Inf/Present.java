@@ -1,9 +1,9 @@
-package com.example.graduationproject.Present;
+package com.example.graduationproject.Present.Inf;
 
-import com.example.graduationproject.model.Model;
-import com.example.graduationproject.view.View;
+import com.example.graduationproject.model.Inf.IModel;
+import com.example.graduationproject.view.Inf.View;
 
-public interface Present<M extends Model,V extends View> {
+public interface Present<M extends IModel,V extends View> {
     /**
      * @param
      */

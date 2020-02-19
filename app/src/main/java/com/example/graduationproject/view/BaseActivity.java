@@ -2,27 +2,31 @@ package com.example.graduationproject.view;
 
 import android.os.Bundle;
 
-import com.example.graduationproject.BaseMVP;
 import com.example.graduationproject.Present.BasePresent;
-import com.example.graduationproject.model.Model;
+import com.example.graduationproject.Present.Inf.IBasePresent;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public abstract class BaseActivity<M extends Model,V extends View,P extends BasePresent>
-        extends AppCompatActivity implements BaseMVP<M,V,P> {
+public abstract class BaseActivity<P extends BasePresent & IBasePresent>
+        extends AppCompatActivity  {
     protected P present;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        present = createPresent();
-        if(present == null){
-            present.registerModel(createModel());
-            present.registerView(createView());
-        }
+        present = getPresenter();
+
     }
+
+    /**
+     * 返回一个持有Activity对象的Presenter对象
+     *
+     * @return 返回的presenter对象
+     * @see #onCreate(Bundle) 中调用了该方法,子类只需要复写,不需要调用
+     */
+    protected abstract P getPresenter();
 
     @Override
     protected void onDestroy() {

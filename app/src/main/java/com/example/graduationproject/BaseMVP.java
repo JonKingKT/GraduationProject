@@ -1,11 +1,10 @@
 package com.example.graduationproject;
 
 import com.example.graduationproject.Present.BasePresent;
-import com.example.graduationproject.Present.Present;
-import com.example.graduationproject.model.Model;
-import com.example.graduationproject.view.View;
+import com.example.graduationproject.model.Inf.IModel;
+import com.example.graduationproject.view.Inf.View;
 
-public interface BaseMVP<M extends Model,V extends View,P extends BasePresent> {
+public interface BaseMVP<M extends IModel,V extends View,P extends BasePresent> {
     M createModel();
     V createView();
     P createPresent();
