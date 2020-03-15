@@ -18,7 +18,8 @@
         android:layout_marginLeft="30dp"
         android:src="@mipmap/setting"
         android:scaleType="centerInside"
-        android:background="#ffffff" />
+        android:background="#ffffff"
+        android:id="@+id/btn_setting"/>
 
     <TextView
         android:layout_width="120dp"
@@ -121,12 +122,12 @@
             android:background="#000000"
             app:layout_constraintBottom_toBottomOf="@id/password_forget"
             app:layout_constraintLeft_toRightOf="@id/password_forget"
-            app:layout_constraintRight_toRightOf="@id/sign_in"
+            app:layout_constraintRight_toRightOf="@id/sign_up"
             app:layout_constraintTop_toTopOf="@id/password_forget"
             />
 
         <Button
-            android:id="@+id/sign_in"
+            android:id="@+id/sign_up"
             android:layout_width="56dp"
             android:layout_height="20dp"
             app:layout_constraintBottom_toBottomOf="@id/password_forget"
