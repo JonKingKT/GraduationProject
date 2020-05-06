@@ -24,5 +24,9 @@
     <string name="Null">无</string>
     <string name="office_home">科室主页</string>
     <string name="choice_more_date">全部日期</string>
+    <string name="choice_date_forenoon">上午号源</string>
+    <string name="choice_date_afternoon">下午号源</string>
+    <string name="choice_date_attention_1">当日号仅支持提前预约</string>
+    <string name="choice_date_attention_2">已超过可预约时间，请预约其他日期号源</string>
 
 </resources>

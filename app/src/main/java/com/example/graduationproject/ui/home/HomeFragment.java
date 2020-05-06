@@ -31,7 +31,8 @@ public class HomeFragment extends Fragment {
     private View root;
     private HomeTypeFragmentAdpter mOfficeAdpter;
     private HomeTypeFragmentAdpter mTypeAdpter;
-    private ArrayList<String> mData = new ArrayList<String>();
+    private ArrayList<String> mTypeData = new ArrayList<String>();
+    private ArrayList<String> mOfficeData = new ArrayList<String>();
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -53,7 +54,7 @@ public class HomeFragment extends Fragment {
     }
 
     private void initRecylerViewOffice() {
-        mOfficeAdpter = new HomeTypeFragmentAdpter(getContext(),mData);
+        mOfficeAdpter = new HomeTypeFragmentAdpter(getContext(), mOfficeData);
         mChoiceOfficesRecyler.setLayoutManager(new LinearLayoutManager(getContext()));
         mOfficeAdpter.setItemObclickLstener(new HomeTypeFragmentAdpter.OnClickListener() {
             @Override
@@ -72,7 +73,7 @@ public class HomeFragment extends Fragment {
 
     private void initRecylerViewType() {
         mChoiceTypeRecyler.setLayoutManager(new LinearLayoutManager(getContext()));
-        mTypeAdpter = new HomeTypeFragmentAdpter(getContext(),mData);
+        mTypeAdpter = new HomeTypeFragmentAdpter(getContext(), mTypeData);
         mChoiceTypeRecyler.setAdapter(mTypeAdpter);
         mTypeAdpter.setItemObclickLstener(new HomeTypeFragmentAdpter.OnClickListener() {
             @Override
@@ -95,14 +96,15 @@ public class HomeFragment extends Fragment {
     private void initData() {
         int i =1;
         for( ;i<20;i++){
-            mData.add("科室"+String.valueOf(i));
+            mTypeData.add("科室"+String.valueOf(i));
+            mOfficeData.add("科室"+String.valueOf(i));
         }
     }
     private void resetData(int postion){
         int i=1;
-        mData.clear();
+        mOfficeData.clear();
         for( ;i<20;i++){
-            mData.add("部门"+(postion+1)+":科室"+String.valueOf(i));
+            mOfficeData.add("部门"+(postion+1)+":科室"+String.valueOf(i));
         }
     }
 
