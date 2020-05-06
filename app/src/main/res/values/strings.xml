@@ -21,6 +21,8 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
-
+    <string name="Null">无</string>
+    <string name="office_home">科室主页</string>
+    <string name="choice_more_date">全部日期</string>
 
 </resources>

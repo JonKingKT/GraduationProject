@@ -2,6 +2,8 @@ package com.example.graduationproject.view;
 
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.example.graduationproject.Present.HomePresent;
 import com.example.graduationproject.R;
@@ -15,6 +17,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 public class HomeActivity extends BaseActivity<HomePresent>  implements IBaseActivity,IHomeActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

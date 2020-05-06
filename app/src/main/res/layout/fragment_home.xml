@@ -4,6 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/text_home"
+        android:id="@+id/chioce_date"
+        android:layout_marginTop="8dp"
+        />
     <TextView
         android:id="@+id/text_home"
         android:layout_width="match_parent"
@@ -15,14 +22,14 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/chioce_date" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="0dp"
         app:layout_constraintWidth_percent="0.3"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_home"
+        app:layout_constraintTop_toBottomOf="@+id/chioce_date"
         android:layout_marginTop="8dp"
         android:scrollbars="none"
         android:id="@+id/recycler_section_home"
@@ -33,7 +40,7 @@
         android:layout_height="wrap_content"
         android:scrollbars="none"
         app:layout_constraintStart_toEndOf="@+id/recycler_section_home"
-        app:layout_constraintTop_toBottomOf="@id/text_home"
+        app:layout_constraintTop_toBottomOf="@id/chioce_date"
         android:layout_marginTop="8dp"
         android:id="@+id/recycler_office_home"
         />

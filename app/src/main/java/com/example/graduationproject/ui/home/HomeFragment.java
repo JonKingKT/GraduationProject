@@ -29,6 +29,8 @@ public class HomeFragment extends Fragment {
     private RecyclerView mChoiceTypeRecyler;
     private TextView textView;
     private View root;
+    private HomeTypeFragmentAdpter mOfficeAdpter;
+    private HomeTypeFragmentAdpter mTypeAdpter;
     private ArrayList<String> mData = new ArrayList<String>();
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -51,9 +53,9 @@ public class HomeFragment extends Fragment {
     }
 
     private void initRecylerViewOffice() {
-        HomeTypeFragmentAdpter mAdpter = new HomeTypeFragmentAdpter(getContext(),mData);
+        mOfficeAdpter = new HomeTypeFragmentAdpter(getContext(),mData);
         mChoiceOfficesRecyler.setLayoutManager(new LinearLayoutManager(getContext()));
-        mAdpter.setItemObclickLstener(new HomeTypeFragmentAdpter.OnClickListener() {
+        mOfficeAdpter.setItemObclickLstener(new HomeTypeFragmentAdpter.OnClickListener() {
             @Override
             public void setClickiItem(int pos, View view) {
                 Intent intent = new Intent(getContext(), ChoiceData.class);
@@ -65,16 +67,18 @@ public class HomeFragment extends Fragment {
 
             }
         });
-        mChoiceOfficesRecyler.setAdapter(mAdpter);
+        mChoiceOfficesRecyler.setAdapter(mOfficeAdpter);
     }
 
     private void initRecylerViewType() {
         mChoiceTypeRecyler.setLayoutManager(new LinearLayoutManager(getContext()));
-        HomeTypeFragmentAdpter mAdpter = new HomeTypeFragmentAdpter(getContext(),mData);
-        mChoiceTypeRecyler.setAdapter(mAdpter);
-        mAdpter.setItemObclickLstener(new HomeTypeFragmentAdpter.OnClickListener() {
+        mTypeAdpter = new HomeTypeFragmentAdpter(getContext(),mData);
+        mChoiceTypeRecyler.setAdapter(mTypeAdpter);
+        mTypeAdpter.setItemObclickLstener(new HomeTypeFragmentAdpter.OnClickListener() {
             @Override
             public void setClickiItem(int pos, View view) {
+                resetData(pos);
+                mOfficeAdpter.notifyDataSetChanged();
                 Toast.makeText(getContext(),"第"+pos,Toast.LENGTH_SHORT).show();
             }
 
@@ -92,6 +96,13 @@ public class HomeFragment extends Fragment {
         int i =1;
         for( ;i<20;i++){
             mData.add("科室"+String.valueOf(i));
+        }
+    }
+    private void resetData(int postion){
+        int i=1;
+        mData.clear();
+        for( ;i<20;i++){
+            mData.add("部门"+(postion+1)+":科室"+String.valueOf(i));
         }
     }
 

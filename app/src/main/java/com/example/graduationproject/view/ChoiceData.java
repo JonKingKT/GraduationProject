@@ -11,6 +11,6 @@ public class ChoiceData extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_choice_data);
+        setContentView(R.layout.activity_choice_date);
     }
 }
