@@ -110,13 +110,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 android:id="@+id/choice_date_btn_down"/>
 
-
-
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
+
 
 
 
