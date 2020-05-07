@@ -2,10 +2,8 @@ package com.example.graduationproject.view;
 
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 
-import com.example.graduationproject.Present.HomePresent;
+import com.example.graduationproject.presenter.HomePresent;
 import com.example.graduationproject.R;
 import com.example.graduationproject.view.Inf.IBaseActivity;
 import com.example.graduationproject.view.Inf.IHomeActivity;

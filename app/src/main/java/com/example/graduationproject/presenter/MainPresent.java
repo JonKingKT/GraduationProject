@@ -1,9 +1,9 @@
-package com.example.graduationproject.Present;
+package com.example.graduationproject.presenter;
 
 import android.os.Handler;
 import android.os.Message;
 
-import com.example.graduationproject.Present.Inf.IMainPresent;
+import com.example.graduationproject.presenter.Inf.IMainPresent;
 import com.example.graduationproject.view.MainActivity;
 import com.example.graduationproject.model.MainModel;
 
@@ -27,4 +27,5 @@ public class MainPresent extends BasePresent<MainModel, MainActivity > implement
     protected void eventReceive(Message msg) {
 
     }
+
 }

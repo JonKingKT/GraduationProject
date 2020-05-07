@@ -1,9 +1,9 @@
-package com.example.graduationproject.Present;
+package com.example.graduationproject.presenter;
 
 import android.os.Handler;
 import android.os.Message;
 
-import com.example.graduationproject.Present.Inf.ILoginPresent;
+import com.example.graduationproject.presenter.Inf.ILoginPresent;
 import com.example.graduationproject.model.LoginModel;
 import com.example.graduationproject.view.LoginActivity;
 
@@ -26,4 +26,6 @@ public class LoginPresent extends BasePresent<LoginModel, LoginActivity> impleme
     protected void eventReceive(Message msg) {
 
     }
+
+
 }

@@ -15,10 +15,9 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
+import com.example.graduationproject.view.adpter.*;
 import com.example.graduationproject.R;
-import com.example.graduationproject.adpter.HomeTypeFragmentAdpter;
-import com.example.graduationproject.view.ChoiceData;
+import com.example.graduationproject.view.ChoiceDataActicity;
 
 import java.util.ArrayList;
 
@@ -59,7 +58,7 @@ public class HomeFragment extends Fragment {
         mOfficeAdpter.setItemObclickLstener(new HomeTypeFragmentAdpter.OnClickListener() {
             @Override
             public void setClickiItem(int pos, View view) {
-                Intent intent = new Intent(getContext(), ChoiceData.class);
+                Intent intent = new Intent(getContext(), ChoiceDataActicity.class);
                 startActivity(intent);
             }
 

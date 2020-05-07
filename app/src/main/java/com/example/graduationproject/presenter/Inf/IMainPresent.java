@@ -1,4 +1,4 @@
-package com.example.graduationproject.Present.Inf;
+package com.example.graduationproject.presenter.Inf;
 
 public interface IMainPresent extends IBasePresent {
 }

@@ -1,10 +1,10 @@
-package com.example.graduationproject.Present;
+package com.example.graduationproject.presenter;
 
 
 import android.os.Handler;
 import android.os.Message;
 
-import com.example.graduationproject.Present.Inf.IHomePresent;
+import com.example.graduationproject.presenter.Inf.IHomePresent;
 import com.example.graduationproject.model.HomeModel;
 import com.example.graduationproject.view.HomeActivity;
 
@@ -27,4 +27,6 @@ public class HomePresent extends BasePresent<HomeModel, HomeActivity> implements
     protected void eventReceive(Message msg) {
 
     }
+
+
 }

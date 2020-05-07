@@ -2,8 +2,8 @@ package com.example.graduationproject.view;
 
 import android.os.Bundle;
 
-import com.example.graduationproject.Present.BasePresent;
-import com.example.graduationproject.Present.Inf.IBasePresent;
+import com.example.graduationproject.presenter.BasePresent;
+import com.example.graduationproject.presenter.Inf.IBasePresent;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;

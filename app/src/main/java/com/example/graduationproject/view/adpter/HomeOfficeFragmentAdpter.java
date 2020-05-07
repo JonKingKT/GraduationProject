@@ -1,4 +1,4 @@
-package com.example.graduationproject.adpter;
+package com.example.graduationproject.view.adpter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -67,7 +67,7 @@ public class HomeOfficeFragmentAdpter extends RecyclerView.Adapter<HomeOfficeFra
 
     class HomeTypeHolder extends RecyclerView.ViewHolder{
         private TextView mTextView;
-        public HomeTypeHolder(@NonNull View itemView) {
+         HomeTypeHolder(@NonNull View itemView) {
             super(itemView);
             mTextView = itemView.findViewById(R.id.text_home_item);
         }

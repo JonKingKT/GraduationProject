@@ -2,14 +2,12 @@ package com.example.graduationproject.view;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.widget.ImageButton;
 
-import com.example.graduationproject.Present.LoginPresent;
+import com.example.graduationproject.presenter.LoginPresent;
 import com.example.graduationproject.R;
 import com.example.graduationproject.view.Inf.IBaseActivity;
 import com.example.graduationproject.view.Inf.ILoginActivity;

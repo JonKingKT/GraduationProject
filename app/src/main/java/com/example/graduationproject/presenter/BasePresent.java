@@ -1,4 +1,4 @@
-package com.example.graduationproject.Present;
+package com.example.graduationproject.presenter;
 
 import android.os.Handler;
 import android.os.Message;
@@ -12,10 +12,11 @@ import java.lang.ref.WeakReference;
 
 public abstract class BasePresent<M extends BaseModel & IBaseModel,V extends BaseActivity & IBaseActivity>
 {
-    private V mView;
+    protected V mView;
     public M mModel;
-
+//    private DaoSession mDaoSession;
     public BasePresent(V view){
+
         mView = view;
         mModel = getModel(getHandler());    //model需要持有handel,用于给主线程发送消息
     }
