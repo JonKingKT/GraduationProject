@@ -62,7 +62,7 @@ public class HomeOfficeFragmentAdpter extends RecyclerView.Adapter<HomeOfficeFra
 
     @Override
     public int getItemCount() {
-        return 0;
+        return mArray == null?0:mArray.size();
     }
 
     class HomeTypeHolder extends RecyclerView.ViewHolder{

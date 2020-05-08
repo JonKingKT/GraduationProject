@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.graduationproject.GraduationApplication;
 import com.example.graduationproject.R;
 import com.example.graduationproject.presenter.ChoiceDatePresent;
 import com.example.graduationproject.view.Inf.IBaseActivity;
@@ -12,6 +11,9 @@ import com.example.graduationproject.view.Inf.IChoiceDateActivity;
 import com.example.graduationproject.view.adpter.AfternoonChoiceAdpter;
 import com.example.graduationproject.view.adpter.DateChoiceAdpter;
 import com.example.graduationproject.view.adpter.ForenoonChoiceAdpter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -49,18 +51,59 @@ public class ChoiceDataActicity extends BaseActivity<ChoiceDatePresent> implemen
     public DateChoiceAdpter dateChoiceAdpter;
     public ForenoonChoiceAdpter foreChoiceAdpter;
     public AfternoonChoiceAdpter afternoonChoiceAdpter;
+    public List<String> mListFore = new ArrayList<String>();
+    public List<String> mListDate = new ArrayList<String>();
+    public List<String> mListAfter = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choice_date);
         ButterKnife.bind(this);
-        init();
+        setData();
+
+        initRecyclerViewDateChoice();
+        initRecyclerViewForenoon();
+        initRecyclerViewAfternoon();
     }
 
-    private void init() {
-        dateChoice.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+    private void initRecyclerViewAfternoon() {
+        afterRecyclerView.setLayoutManager(new LinearLayoutManager(this){
+            @Override
+            public boolean canScrollVertically() {
+                return false;
+            }
+        });
+        afternoonChoiceAdpter = new AfternoonChoiceAdpter(this,mListAfter);
+        afterRecyclerView.setAdapter(afternoonChoiceAdpter);
+    }
 
+    private void initRecyclerViewForenoon() {
+        foreRecyclerView.setLayoutManager(new LinearLayoutManager(this){
+            @Override
+            public boolean canScrollVertically() {
+                return false;
+            }
+        });
+        foreChoiceAdpter = new ForenoonChoiceAdpter(this,mListFore);
+        foreRecyclerView.setAdapter(foreChoiceAdpter);
+
+    }
+
+    private void setData() {
+       for(int i=0;i<15;i++){
+           mListAfter.add("周日");
+           mListFore.add("周日");
+           mListDate.add("周日");
+       }
+    }
+
+    private void initRecyclerViewDateChoice() {
+        LinearLayoutManager lm = new LinearLayoutManager(this);
+        lm.setOrientation(LinearLayoutManager.HORIZONTAL);
+        dateChoice.setLayoutManager(lm);
+        dateChoiceAdpter = new DateChoiceAdpter(this,mListDate);
+        dateChoice.setAdapter(dateChoiceAdpter);
 
     }
 

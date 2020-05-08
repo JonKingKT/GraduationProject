@@ -28,5 +28,14 @@
     <string name="choice_date_afternoon">下午号源</string>
     <string name="choice_date_attention_1">当日号仅支持提前预约</string>
     <string name="choice_date_attention_2">已超过可预约时间，请预约其他日期号源</string>
+    <string name="confirm_patient">就诊人</string>
+    <string name="confirm_patient_add">添加就诊人信息</string>
+    <string name="confirm_visit_need">就诊需求(可多选)</string>
+    <string name="confirm_checkobx1">问诊</string>
+    <string name="confirm_checkobx2">开药</string>
+    <string name="confirm_checkobx3">检查</string>
+    <string name="confirm_checkobx4">复诊</string>
+    <string name="confirm_checkobx5">手术</string>
+    <string name="confirm_checkobx6">其他</string>
 
 </resources>

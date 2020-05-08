@@ -14,7 +14,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
+        android:textSize="20sp"
         android:id="@+id/choice_date_textview_team_name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -30,7 +30,7 @@
         app:layout_constraintTop_toBottomOf="@id/choice_date_textview_team_name"
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
-        android:textSize="12sp"
+        android:textSize="16sp"
         android:layout_marginStart="12dp"
         android:hint="@string/Null"
         />
@@ -41,16 +41,17 @@
         android:text="@string/office_home"
         app:layout_constraintEnd_toStartOf="@id/choice_date_btn_in"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/choice_date_divice"
+
         android:inputType="textMultiLine"
         android:id="@+id/choice_date_office_home"
         android:textColor="#40E0D0"
         android:textStyle="bold"
-        android:textSize="16sp"/>
+        android:textSize="15sp"/>
 
     <ImageView
-        android:layout_width="32dp"
-        android:layout_height="32dp"
+        android:layout_width="24dp"
+        android:layout_height="28dp"
         app:layout_constraintEnd_toEndOf="parent"
         android:scaleType="fitXY"
         app:layout_constraintTop_toTopOf="@id/choice_date_office_home"
@@ -62,7 +63,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/choice_date_office_home"
+        app:layout_constraintTop_toBottomOf="@id/choice_date_textview_team_location"
         android:background="@drawable/text_shadow"
         android:layout_marginTop="8dp"
         android:id="@+id/choice_date_divice"
@@ -70,7 +71,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="88dp"
         app:layout_constraintStart_toStartOf="parent"
         android:id="@+id/choice_date_linear_mid"
         app:layout_constraintTop_toBottomOf="@id/choice_date_divice"
@@ -79,7 +80,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/choice_date_recycler_datechoice"
             android:layout_width="0dp"
-            android:layout_height="80dp"
+            android:layout_height="wrap_content"
             android:layout_weight="4"
             android:orientation="horizontal" />
 
@@ -225,6 +226,7 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:scrollbars="none"
                     android:id="@+id/choice_date_recycler_forenoon"
                     android:background="#ffffff"/>
 
@@ -254,6 +256,7 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:scrollbars="none"
                     android:id="@+id/choice_date_recycler_afternoon"
                     android:background="#ffffff"/>
 
