@@ -18,6 +18,7 @@
             android:layout_weight="2"
             android:text="@string/confirm_patient"
             android:layout_marginStart="10dp"
+            android:textColor="#000000"
             android:textSize="18sp"
             android:layout_gravity="center"
             />
@@ -114,6 +115,7 @@
             android:layout_marginTop="12dp"
             android:textSize="18sp"
             android:text="@string/confirm_visit_need"
+            android:textColor="#000000"
             android:id="@+id/confirm_textview_visit_need"
             android:layout_marginStart="10dp"/>
         <CheckBox
@@ -181,16 +183,169 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/confirm_constralayout2"
         android:layout_marginTop="16dp"
         android:background="#ffffff"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/confirm_constralayout3"
+        android:orientation="vertical">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="10dp"
+            android:text="@string/confirm_informaition"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="54dp"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"
+            android:text="@string/confirm_hospital_name"
+            android:id="@+id/confirm_textview1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/confirm_textview1"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="10dp"
+            android:textSize="18sp"
+            android:text="@string/confirm_office_name"
+            android:id="@+id/confirm_textview2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/confirm_textview2"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="10dp"
+            android:textSize="18sp"
+            android:text="@string/confirm_doctor_dowell"
+            android:id="@+id/confirm_textview3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/confirm_textview3"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="40dp"
+            android:textSize="18sp"
+            android:text="@string/confirm_doctor_cost"
+            android:id="@+id/confirm_textview4"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/confirm_textview4"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="40dp"
+            android:textSize="18sp"
+            android:text="@string/confirm_date"
+            android:id="@+id/confirm_textview5"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/confirm_textview1"
+            app:layout_constraintTop_toTopOf="@id/confirm_textview1"
+            android:layout_marginStart="116dp"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:text="@string/confirm_hospital_name_bean"
+            android:id="@+id/confirm_textview_bean1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/confirm_textview_bean1"
+            app:layout_constraintTop_toTopOf="@id/confirm_textview2"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:id="@+id/confirm_textview_bean2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/confirm_textview_bean2"
+            app:layout_constraintTop_toTopOf="@id/confirm_textview3"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:id="@+id/confirm_textview_bean3"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/confirm_textview_bean3"
+            app:layout_constraintTop_toTopOf="@id/confirm_textview4"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:id="@+id/confirm_textview_bean4"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/confirm_textview_bean1"
+            app:layout_constraintTop_toTopOf="@id/confirm_textview5"
+            android:textSize="18sp"
+            android:textColor="#FF8C00"
+            android:id="@+id/confirm_textview_bean5"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toBottomOf="@id/confirm_constralayout3"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:id="@+id/confirm_Linear4"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/illealdetials"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_marginStart="10dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:hint="@string/Illels_details"
+            android:maxLength="80"
+            android:id="@+id/confirm_detials_editText"
+            />
     </LinearLayout>
+
+    <Button
+        android:layout_width="320dp"
+        android:layout_height="56dp"
+        android:background="@drawable/backfround_green"
+        app:layout_constraintTop_toBottomOf="@id/confirm_Linear4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:text="@string/confirm_confirem"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:id="@+id/confirm_button_confirm"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

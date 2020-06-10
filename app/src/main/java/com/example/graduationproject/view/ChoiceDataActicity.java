@@ -1,6 +1,10 @@
 package com.example.graduationproject.view;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -47,10 +51,12 @@ public class ChoiceDataActicity extends BaseActivity<ChoiceDatePresent> implemen
     public RecyclerView foreRecyclerView;
     @BindView(R.id.choice_date_recycler_afternoon)
     public RecyclerView afterRecyclerView;
+    @BindView(R.id.choice_date_btn_in)
+    public ImageView btnIn;
 
     public DateChoiceAdpter dateChoiceAdpter;
     public ForenoonChoiceAdpter foreChoiceAdpter;
-    public AfternoonChoiceAdpter afternoonChoiceAdpter;
+    public ForenoonChoiceAdpter afternoonChoiceAdpter;
     public List<String> mListFore = new ArrayList<String>();
     public List<String> mListDate = new ArrayList<String>();
     public List<String> mListAfter = new ArrayList<String>();
@@ -65,6 +71,17 @@ public class ChoiceDataActicity extends BaseActivity<ChoiceDatePresent> implemen
         initRecyclerViewDateChoice();
         initRecyclerViewForenoon();
         initRecyclerViewAfternoon();
+        setClick();
+    }
+
+    private void setClick() {
+        btnIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ChoiceDataActicity.this,OfficeInfoActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initRecyclerViewAfternoon() {
@@ -74,7 +91,14 @@ public class ChoiceDataActicity extends BaseActivity<ChoiceDatePresent> implemen
                 return false;
             }
         });
-        afternoonChoiceAdpter = new AfternoonChoiceAdpter(this,mListAfter);
+        afternoonChoiceAdpter = new ForenoonChoiceAdpter(this,mListAfter);
+        afternoonChoiceAdpter.setOnClickListener(new ForenoonChoiceAdpter.OnClickListener(){
+            @Override
+            public void setOnClickListener(int pos, View view) {
+                Intent intent = new Intent(getApplicationContext(),ConfirmAppointActivity.class);
+                startActivity(intent);
+            }
+        });
         afterRecyclerView.setAdapter(afternoonChoiceAdpter);
     }
 
@@ -86,6 +110,13 @@ public class ChoiceDataActicity extends BaseActivity<ChoiceDatePresent> implemen
             }
         });
         foreChoiceAdpter = new ForenoonChoiceAdpter(this,mListFore);
+        foreChoiceAdpter.setOnClickListener(new ForenoonChoiceAdpter.OnClickListener(){
+            @Override
+            public void setOnClickListener(int pos, View view) {
+                Intent intent = new Intent(getApplicationContext(),ConfirmAppointActivity.class);
+                startActivity(intent);
+            }
+        });
         foreRecyclerView.setAdapter(foreChoiceAdpter);
 
     }

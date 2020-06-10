@@ -21,6 +21,10 @@ public class ForenoonChoiceAdpter extends RecyclerView.Adapter<ForenoonChoiceAdp
     private Context mContext;
     private List<String> mArray;
 
+    public void setOnClickListener(OnClickListener onClickListener){
+        this.onClickListener = onClickListener;
+    }
+
     public interface OnClickListener{
        void setOnClickListener(int pos,View view);
     }
@@ -45,6 +49,15 @@ public class ForenoonChoiceAdpter extends RecyclerView.Adapter<ForenoonChoiceAdp
         holder.textViewDoWell.setText( mArray.get(position));
         holder.textViewCost.setText(mArray.get(position));
         holder.buttonpur.setText(mArray.get(position));
+        if(onClickListener != null){
+            holder.buttonpur.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    onClickListener.setOnClickListener(position,holder.buttonpur);
+                }
+            });
+        }
+
     }
 
     @Override
